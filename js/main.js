@@ -59,7 +59,7 @@ setTimeout( function() {
     score.classList.remove('d-none');
     score.innerHTML = "Complimenti! <br> Hai ricordato " + check.length + " numero/i! <br>" + check;
     
-}, 1000);
+}, 30000);
 
 
 
