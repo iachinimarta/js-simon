@@ -56,9 +56,9 @@ setTimeout( function() {
 
     //Stampo i numeri di check nell html
     let score = document.getElementById('score');
-    score.innerHTML = "Complimenti! <br> Hai ricordato il numero: <br>" + check;
     score.classList.remove('d-none');
-
+    score.innerHTML = "Complimenti! <br> Hai ricordato " + check.length + " numero/i! <br>" + check;
+    
 }, 1000);
 
 
