@@ -40,6 +40,7 @@ setTimeout( function() {
 
     console.log(userNumbers);
 
+    //Creo un array per i numeri indovinati dall utente
     let check = [];
 
     // Scorro i numeri inseriti dall utente 
@@ -47,14 +48,18 @@ setTimeout( function() {
 
         //Se sono inclusi nei numeri generati
         if (numbers.includes(userNumbers[i])) {
+
+            //Inserisco i numeri nell array check
             check.push(userNumbers[i]);
         }
     }
 
-    console.log("Complimenti! Hai ricordato il numero " + check);
-    
-    
-}, 5000);
+    //Stampo i numeri di check nell html
+    let score = document.getElementById('score');
+    score.innerHTML = "Complimenti! <br> Hai ricordato il numero: <br>" + check;
+    score.classList.remove('d-none');
+
+}, 1000);
 
 
 

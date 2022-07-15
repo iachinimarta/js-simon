@@ -29,3 +29,16 @@ html {
 .d-none {
     display: none;
 }
+
+#score {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #eebbc3;
+    padding: 20px;
+}
+
+.d-block {
+    display: block;
+}
