@@ -30,18 +30,25 @@ let addedNumbers;
 //Imposto due timeout diversi per la compatibilità con chrome altrimenti il prompt comparirebbe prima che i numeri vengono nascosti
 setTimeout( function() {
     text.classList.add('d-none');
-}, 30000);
-
+}, 2000);
 
 //Dopo 31 secondi
 setTimeout( function() {
     
     //Il prompt si ripeterà per 5 volte
-    for (i = 0; i < 5; i++) {
+    let i = 0;
+    while (i < 5) {
         addedNumbers = parseInt(prompt("Inserisci i numeri che ricordi!"));
 
-        //Stampo i numeri inseriti dall utente nell array userNumbers
-        userNumbers.push(addedNumbers);
+        //Imposto un controllo per non fare inserire 2 volte lo stesso numero
+        if (!userNumbers.includes(addedNumbers)) {
+            //Stampo i numeri inseriti dall utente nell array userNumbers
+            userNumbers.push(addedNumbers);
+            i++;
+        } else {
+            alert("Numero già inserito!");
+        }
+
     }
 
     console.log(userNumbers);
@@ -65,11 +72,4 @@ setTimeout( function() {
     score.classList.remove('d-none');
     score.innerHTML = "Hai ricordato " + check.length + " numero/i! <br>" + check;
     
-}, 31000);
-
-
-
-
-
-
-
+}, 2100);
