@@ -18,8 +18,6 @@ for (i = 0; i < 5; i++) {
     numbers.push(numbersList);
 }
 
-console.log(numbers);
-
 //Stampo i numeri nell html
 text.innerHTML = numbers;
 
@@ -48,10 +46,7 @@ setTimeout( function() {
         } else {
             alert("Numero già inserito!");
         }
-
     }
-
-    console.log(userNumbers);
 
     //Creo un array per i numeri indovinati dall utente
     let check = [];
