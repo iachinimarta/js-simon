@@ -26,12 +26,14 @@ text.innerHTML = numbers;
 const userNumbers = [];
 let addedNumbers;
 
+//Imposto un timeout che dopo 30 secondi fa scomparire i numeri
 //Imposto due timeout diversi per la compatibilità con chrome altrimenti il prompt comparirebbe prima che i numeri vengono nascosti
 setTimeout( function() {
     text.classList.add('d-none');
 }, 30000);
 
-//Imposto un timeout che dopo 30 secondi fa scomparire i numeri
+
+//Dopo 31 secondi
 setTimeout( function() {
     
     //Il prompt si ripeterà per 5 volte
